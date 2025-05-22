@@ -19,9 +19,9 @@ This design simplifies development and maintenance by these concepts:
 ## Objects
 Are **entities** that have behavior and can have physical or logical states 
 They can be defined as an **instance** of a class.
-    _Similar to pointers, an *instance* is a *reference* (constains the address) and takes up space in memory. 
+    - Similar to pointers, an *instance* is a *reference* (contains the address) and takes up space in memory. 
 For objects to communicate, they require these simple specifications:
-- The **type** of message expected to recive.
+- The **type** of message expected to receive.
 - And the **type** of response to return.
 Syntax to instantiate a new object:
 ```java []
@@ -65,7 +65,7 @@ Example:
 class Plant{//define the class name
     //variables
     public Plant(/*no parameters*/) {
-        //default constructor made by compiler if none were provided
+        //default constructor made by the compiler if none were provided
         super(); //default call with default behavior
     } 
 }
@@ -126,7 +126,7 @@ class Plant{//define the class name
 ## Inheritance
 Which one object *acquires* or *obtains* all the properties and behaviors of the parent object. This represents a parent-child relationship.
 You can create new classes that are built from existing classes.
-_When you inherit from existing classes, you can reuse methods and fields from the parent class.
+- When you inherit from existing classes, you can reuse methods and fields from the parent class.
 *Terms*
 - class: a group of objects with common properties
 - subclass: a child class that inherits from the parent class
