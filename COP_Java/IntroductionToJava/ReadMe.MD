@@ -1,7 +1,7 @@
 # Java OOP Recap
-An object oriented language that organizes programs as objects and classes.
-Its a platform independent language that can run on any device that has a JVM  (Java Virtual Machine).
-Object oriented programming (OOP), is a methodology or paradigm to design programs using entities such as objects and classes.
+An object-oriented language that organizes programs as objects and classes.
+It's a platform-independent language that can run on any device that has a JVM  (Java Virtual Machine).
+Object-oriented programming (OOP), is a methodology or paradigm to design programs using entities such as objects and classes.
 This design simplifies development and maintenance by these concepts:
 
 ## The main concepts are,
@@ -10,7 +10,7 @@ This design simplifies development and maintenance by these concepts:
 - Classes
 - Constructs
 - Entity relationships
-### The four principals are,
+### The four principles are,
 - Abstraction
 - Encapsulation
 - Inheritance
@@ -29,7 +29,7 @@ ClassName ObjectName = new ClassName();
 ```
 
 ## Classes
-Are templates that are used to create objects, define the object types, and methods.
+Templates that are used to create objects, define the object types, and methods.
 A class can be defined as a *blueprint* where you can create individual objects.
 Syntax:
 ```java []
@@ -38,11 +38,11 @@ public /*<-access modifier*/ class ClassName {...}
 
 ## Constructor
 Are blocks of code similar to methods. However, they must abide a few different rules. These blocks of code contain **attributes** or **object characteristics**.
-They are called when an instance of the objects is intantiated, and memory is allocated for the object.
-    _It is a special type of method used for object **initialization**. It is called "construct" because this special method *establishes, or contrives the values* at the time of object creation.
+They are called when an instance of the object is instantiated, and memory is allocated for the object.
+    _It is a special type of method used for object **initialization**. It is called "construct" because this special method *establishes, or contrives, the *values* at the time of object creation.
 
-When an object is intantiated, the compiler makes sure that constructors and all other inherited objects (sub-objects) are called. 
-Synatx: 
+When an object is instantiated, the compiler makes sure that constructors and all other inherited objects (sub-objects) are called. 
+Syntax: 
 ```java []
 public ConstructNameSameAsClassName() {
     this/*initialization keyword*/.variableName = attributeName; //defined variable
@@ -59,13 +59,13 @@ class Plant{//define the class name
 }
 ```
 There are two kinds of constructs:
-- **default**, called automatically if none are provided and parameterless. The compiler inserts a default constructor on your befalf.
+- **default**, called automatically if none are provided and parameterless. The compiler inserts a default constructor on your behalf.
 Example:
 ```java []
 class Plant{//define the class name
     //variables
     public Plant(/*no parameters*/) {
-        //default constructor made by compiler if none where provided
+        //default constructor made by compiler if none were provided
         super(); //default call with default behavior
     } 
 }
@@ -93,7 +93,7 @@ _Regardless of the category, constructs are specified by these protocols:
 Methods are simply functions that operate within a class. 
 They contain blocks of functions that define different behaviors linked to objects. 
 Similar to individual functions, methods:
-- exposes behavior of an object
+- exposes the behavior of an object
 - *must have a return type*
 - invoked explicitly
 - not provided by the compiler 
@@ -115,29 +115,29 @@ class Plant{//define the class name
         "\nAnd thrives under in conditions within " + temp + " temperatures.");
     }
     public static void main (String arg[]){
-        //instantiate a new Plant object
+        //Instantiate a new Plant object
         Plant coconut_tree = new Plant(24, true, 90.00, "Coconut Tree");
-        //invoke the diplay method attatched to the specified object
+        //invoke the display method attached to the specified object
         coconut_tree.display();
     }
 }
 ```
 
 ## Inheritance
-Is which one object *aquires* or *obtain* all the properties and behaviors of the parent object. This represents a parent-child relationship.
-You can create new classes that are built from exisiting classes.
-_When you inherit from exisiting classes, you can resuse methods and feilds from the parent class.
+Which one object *acquires* or *obtains* all the properties and behaviors of the parent object. This represents a parent-child relationship.
+You can create new classes that are built from existing classes.
+_When you inherit from existing classes, you can reuse methods and fields from the parent class.
 *Terms*
 - class: a group of objects with common properties
-- subclass: a child class that inherits from parent class
-    _- Other names: extended class, child class, derived class
-- Superclass: parent class where a subclass inherits from
-    _-Other names: base class, parent class
+- subclass: a child class that inherits from the parent class
+    - Other names: extended class, child class, derived class
+- Superclass: parent class from which a subclass inherits
+    - Other names: base class, parent class
 Syntax:
 ```java []
 class SubclassName extends SuperClassName{...}
 ```
-Theres several categories of inheritance:
+There are several categories of inheritance:
 ### singleton
 Inheritance from only one superclass.
     class B
@@ -190,7 +190,7 @@ A class inherits from multiple superclasses. Not supported by java, but possible
 An **interface** is an *abstract* type used to carry a group of related methods.
 It is similar to a class, however:
 - must include the interface keyword
-- contains static mothods (empty bodies) and variables 
+- contains static methods (empty bodies) and variables 
 - does not contain constructors and cannot instantiate objects 
 Syntax:
 ```java []
@@ -204,10 +204,10 @@ class ClassA implements Interface_A{...}
 ### Super();
 A keyword to access a superclass (parent class) member from a subclass (child class). 
 This keyword is primarily used to invoke the *default* constructor of the parent class, using `super()` ensures that:
-- the parent class initialization logic is executed on the behalf of a class constructor not being present.
+- The parent class initialization logic is executed on behalf of a class constructor not being present.
 - overriding the parent class method 
 - passing constructors to the subclass
-- accessing superclass feilds from the subclass 
+- accessing superclass fields from the subclass 
 Example:
 ```java []
 class ClassA{
@@ -235,9 +235,9 @@ class ClassB extends ClassA{
 ```
 
 ## Polymorphism
-The ability of an object to take on many forms. This usually occurs by overriding, when a parent class is used to refer to a child class object. Or overloading, by changing the paramter list.  
+The ability of an object to take on many forms. This usually occurs by overriding, when a parent class is used to refer to a child class object, or by overloading, by changing the parameter list.  
 ### Overloading
-Achived by changing the number of arguments and/or data types the method accepts. 
+Achieved by changing the number of arguments and/or data types the method accepts. 
 Example:
 ```java []
 //notice the method name is the exact same
@@ -248,7 +248,7 @@ public void myMethod(int a, int b, double c, double d){...};
 ### Overriding
 When a subclass has the *same method* declared in the parent class.
 Rules:
-- method must be the same name
+- The method must be the same name
 - must have the same parameters 
 - must be inherited
 Example:
@@ -277,13 +277,13 @@ public static void main(String args[]){
 ```
 ### Differences 
 Overloading
-- perforemed within a class
-- paramater list must be unique 
-- compile time polymorphasim 
+- performed within a class
+- Parameter list must be unique 
+- compile-time polymorphism 
 Overriding
-- only occures in a parent-child relationship
-- paramter list must be exactly the same
-- run time polymorphism
+- only occurs in a parent-child relationship
+- Parameter list must be exactly the same
+- run-time polymorphism
 
 ## Abstarction
 The process of hiding implementation and only showing functionality.
@@ -314,8 +314,8 @@ abstract class Plant{
     abstract int pollinate();
 }
 ```
-**Generalization** is the process of extracting *shared characteristics* from two or more classes, and combining them into a *generalized* ***suberclass***
-    _Shared characteristics may be methods, attributes, or associations.
+**Generalization** is the process of extracting *shared characteristics* from two or more classes, and combining them into a *generalized* ***superclass***
+    - Shared characteristics may be methods, attributes, or associations.
 Example:
 ```java []
 class Plant{//Parent class
@@ -385,7 +385,7 @@ class F_Plant extends Plant{//child female class of parent class Plant
         return offspring;
     }
 }
-class SeedBearing extends F_Plant{//a more specilized object of female plant
+class SeedBearing extends F_Plant{//a more specialized object of female plant
     int seeds;
     public SeedBearing(int offspring, int seeds){
         super(light, air, energy, offspring);//call parent constructor
@@ -420,22 +420,22 @@ class SporeBearing extends F_Plant{//a more specialized object of female plant
 ## Encapsulation:
 A process of wrapping code together into a single unit.
 We do this by making a class *private* and employ **getter** and **setter** methods to modify it. This hides and gives us control over the data.
-    _Access modifieres specifies the *scope* of a data member, method, constructor, or class.
-Categories and thier access:
+    - Access modifiers specify the *scope* of a data member, method, constructor, or class.
+Categories and their access:
 - private
-    _Within the class
+    - Within the class
 - default
-    _Within the class
-    _within the package/file
+    - Within the class
+    - within the package/file
 - protected
-    _Within the class
-    _Within the package/file
-    _Outside the package/file by a subclass only
+    - Within the class
+    - Within the package/file
+    - Outside the package/file by a subclass only
 - public
-    _Within the class
-    _Within the package/file
-    _Outside the package/file by subclass
-    _Outside the package/file
+    - Within the class
+    - Within the package/file
+    - Outside the package/file by subclass
+    - Outside the package/file
 Example:
 ```java []
 public class Person{
