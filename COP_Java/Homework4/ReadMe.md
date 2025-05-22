@@ -28,6 +28,7 @@ The calls `revalidate()` and `repaint()` to revalidate and repaint the component
 
 ### Method:
 `paintComponent()`, a JComponent method
+
 *parameter:* g referencing Graphics object
 overridden to set the color of the bar based on its index, and the width of the bar is set by the model input value. 
 
@@ -48,8 +49,10 @@ This class is responsible for the keyboard event response, implementing the `Act
 If the text cannot be parsed to an integer, an exception is thrown to reset the test field to the current value already stored in `model`.
 - This caused the text field to only take in one value at a time, like if I wanted to type `50` it would only pass `5`.
 
-so instead of updating every time a key is released, we can use `ActionsListener()` to update when we press Enter.
+So, instead of updating every time a key is released, we can use `ActionsListener()` to update when we press Enter.
+
 *parameter:* `e` of type `ActionEvent` referencing the ActionEvent interface
+
 *logic:* does not change, only differences are the parameters passed.
 
 # ModelNumber.java
@@ -67,25 +70,33 @@ holds the `update()` method that is invoked by the `notifyObservers()` method
 `addObserver()` 
 *parameter:* observer of type ModelObserver 
 - references the observers array list object 
+
 *logic:* adds an `observer` to the `observers` array list
 
 `getSize()`
+
 *logic:* returns the `values` array list size by invoking `size()`
 
 `getValue()`
+
 *logic:* returns the `values` array list element at a specified `index` by invoking get()
 
 `addValue()`, adds a new value
+
 *parameters:* integer `value`, given by the user
+
 *logic:* adds a value element to the `values` array list and invokes `notifyObservers()`
 
 `setValue()`, updates an existing value
+
 *parameters:* two integers
 - `index`, actual index of the values array list 
 - `value`, input given by the user
+
 *logic:* checks if the input value is between 0-100, sets the `value` element to the `values` array at a specified `index`, and invokes the `notifyObservers()`
 
 `notifyObservers()`, notify changes to the observer
+
 *logic:* for each `observer` element in the `observers` array list, invoke `update()` to the referenced `observer` object.
 
 
