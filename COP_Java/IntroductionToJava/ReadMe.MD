@@ -140,9 +140,6 @@ class SubclassName extends SuperClassName{...}
 There are several categories of inheritance:
 ### singleton
 Inheritance from only one superclass.
-    class B
-       ^
-    class A
 Example:
 ```java []
 class ClassA{...}
@@ -154,11 +151,6 @@ public static void main(String args[]){
 ```
 ### multilevel
 A chain of inheritance.
-    class C
-       ^
-    class B
-       ^
-    class A
 Example:
 ```java []
 class ClassA{...}
@@ -172,9 +164,6 @@ public ststic void main(String args[]){
 ```
 ### hierarchal
 Many classes inherit from a single superclass.
-        class A
-        /     \
-    class B class C
 Example:
 ```java []
 class ClassA{...}
@@ -183,9 +172,7 @@ class ClassC extends ClassA{...}
 ```
 ### multiple
 A class inherits from multiple superclasses. Not supported by java, but possible by using interfaces.
-    class A class B
-       \   /    \
-    class C - class D
+
 ### Interface
 An **interface** is an *abstract* type used to carry a group of related methods.
 It is similar to a class, however:
