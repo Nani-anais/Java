@@ -223,7 +223,7 @@ class ClassB extends ClassA{
 
 ## 🧩 Polymorphism
 The ability of an object to take on many forms. This usually occurs by overriding, when a parent class is used to refer to a child class object, or by overloading, by changing the parameter list.  
-### Overloading
+### 🎚️ Overloading
 Achieved by changing the number of arguments and/or data types the method accepts. 
 Example:
 ```java []
@@ -232,7 +232,7 @@ public void myMethod(int a, int b){...};
 public void myMethod(int a, int b, int c){...};
 public void myMethod(int a, int b, double c, double d){...}; 
 ```
-### Overriding
+### ✏️ Overriding
 When a subclass has the *same method* declared in the parent class.
 Rules:
 - The method must have the same name
@@ -262,12 +262,13 @@ public static void main(String args[]){
     Object_B.method2();
 }
 ```
-### Differences 
-Overloading
+### 💡 Differences 
+Overloading:
 - performed within a class
 - Parameter list must be unique 
-- compile-time polymorphism 
-Overriding
+- compile-time polymorphism
+
+Overriding:
 - only occurs in a parent-child relationship
 - Parameter list must be exactly the same
 - run-time polymorphism
