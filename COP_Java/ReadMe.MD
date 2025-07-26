@@ -1,22 +1,22 @@
-# Java OOP Recap
+# 💭 Java OOP Recap
 An object-oriented language that organizes programs as objects and classes.
 It's a platform-independent language that can run on any device that has a JVM  (Java Virtual Machine).
 Object-oriented programming (OOP), is a methodology or paradigm to design programs using entities such as objects and classes.
 This design simplifies development and maintenance by these concepts:
 
-## The main concepts are,
+## 🎯 The main concepts are,
 - Objects 
 - Methods
 - Classes
 - Constructs
 - Entity relationships
-### The four principles are,
+### 🧩 The four principles are,
 - Abstraction
 - Encapsulation
 - Inheritance
 - Polymorphism
 
-## Objects
+## 🌱 Objects
 Are **entities** that have behavior and can have physical or logical states 
 They can be defined as an **instance** of a class.
     - Similar to pointers, an *instance* is a *reference* (contains the address) and takes up space in memory. 
@@ -28,7 +28,7 @@ Syntax to instantiate a new object:
 ClassName ObjectName = new ClassName();
 ```
 
-## Classes
+## 📚 Classes
 Templates that are used to create objects, define the object types, and methods.
 A class can be defined as a *blueprint* where you can create individual objects.
 Syntax:
@@ -36,8 +36,8 @@ Syntax:
 public /*<-access modifier*/ class ClassName {...}
 ```
 
-## Constructor
-Are blocks of code similar to methods. However, they must abide a few different rules. These blocks of code contain **attributes** or **object characteristics**.
+## 🧱 Constructor
+Are blocks of code similar to methods. However, they must abide by a few different rules. These blocks of code contain **attributes** or **object characteristics**.
 They are called when an instance of the object is instantiated, and memory is allocated for the object.
     _It is a special type of method used for object **initialization**. It is called "construct" because this special method *establishes, or contrives, the *values* at the time of object creation.
 
@@ -71,7 +71,7 @@ class Plant{//define the class name
 }
 Plant yourPlant = new Plant(/*no arguments*/); //intantiated as 'yourPlant'
 ```
-- **parameterized**, called by an initializer (unique parameters) list. Used to provide *unique vales* to the *distinct object*.
+- **parameterized**, called by an initializer (unique parameters) list. Used to provide *unique values* to the *distinct object*.
 Example:
 ```java []
 class Plant{//define the class name
@@ -89,7 +89,7 @@ _Regardless of the category, constructs are specified by these protocols:
 - *must be the same name as the class.*
 - must not have an explicit return type.
 - cannot be abstract, static, final, or synchronized.
-### Constructor VS Method 
+### 💡 Constructor VS Method 
 Methods are simply functions that operate within a class. 
 They contain blocks of functions that define different behaviors linked to objects. 
 Similar to individual functions, methods:
@@ -123,7 +123,7 @@ class Plant{//define the class name
 }
 ```
 
-## Inheritance
+## 🧩 Inheritance
 Which one object *acquires* or *obtains* all the properties and behaviors of the parent object. This represents a parent-child relationship.
 You can create new classes that are built from existing classes.
 - When you inherit from existing classes, you can reuse methods and fields from the parent class.
@@ -221,13 +221,13 @@ class ClassB extends ClassA{
 }
 ```
 
-## Polymorphism
+## 🧩 Polymorphism
 The ability of an object to take on many forms. This usually occurs by overriding, when a parent class is used to refer to a child class object, or by overloading, by changing the parameter list.  
 ### Overloading
 Achieved by changing the number of arguments and/or data types the method accepts. 
 Example:
 ```java []
-//notice the method name is the exact same
+//Notice the method name is the exact same
 public void myMethod(int a, int b){...};
 public void myMethod(int a, int b, int c){...};
 public void myMethod(int a, int b, double c, double d){...}; 
@@ -235,7 +235,7 @@ public void myMethod(int a, int b, double c, double d){...};
 ### Overriding
 When a subclass has the *same method* declared in the parent class.
 Rules:
-- The method must be the same name
+- The method must have the same name
 - must have the same parameters 
 - must be inherited
 Example:
@@ -272,7 +272,7 @@ Overriding
 - Parameter list must be exactly the same
 - run-time polymorphism
 
-## Abstarction
+## 🧩 Abstarction
 The process of hiding implementation and only showing functionality.
 It focuses on *what* an object does rather than *how*.
 Abstract classes can be instantiated directly by defining a class with the *abstract* keyword and with interfaces.
@@ -387,7 +387,7 @@ class SeedBearing extends F_Plant{//a more specialized object of female plant
         return seeds;
     }
 }
-class SporeBearing extends F_Plant{//a more specialized object of female plant
+class SporeBearing extends F_Plant{//a more specialized object of a female plant
     int spores;
     public SporeBearing(int offspring, int spores){
         super(light, air, energy, offspring);//call parent constructor
@@ -404,9 +404,9 @@ class SporeBearing extends F_Plant{//a more specialized object of female plant
 }
 ```
 
-## Encapsulation:
+## 🧩 Encapsulation:
 A process of wrapping code together into a single unit.
-We do this by making a class *private* and employ **getter** and **setter** methods to modify it. This hides and gives us control over the data.
+We do this by making a class *private* and employing **getter** and **setter** methods to modify it. This hides and gives us control over the data.
     - Access modifiers specify the *scope* of a data member, method, constructor, or class.
 Categories and their access:
 - private
